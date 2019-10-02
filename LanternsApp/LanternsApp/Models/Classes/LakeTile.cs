@@ -7,9 +7,6 @@ namespace LanternsApp
 {
     public class LakeTile : IColor
     {
-        //public static SetGetLakeTile(string[] args)
-        //{ 
-
         //Tile Id
         public int TileId { get; set; }
 
@@ -23,9 +20,21 @@ namespace LanternsApp
         public int OrientationQuadrant { get; set; }
 
         //X & Y Coordinates
-        public int XCoordinate { get; set; }
-        public int YCoordinate { get; set; }
-    //}
+        public int xCoordinate { get; set; }
+        public int yCoordinate { get; set; }
+
+        private int tileLimit = 36;
+
+        public bool CanCreateTile( int expectedId)
+        {
+            if (expectedId <= tileLimit)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public string Can
     }
 }
 
