@@ -1,5 +1,4 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -8,42 +7,40 @@ namespace LanternsApp
 {
     public class LakeTile
     {
-        //Tile Id
-        public static int TileId { get; set; }
+        //Count lake tiles
+        public static int TotalTilesCreated { get; set; } = 0;
 
-        //Tile Quadrant Colors
-        public string ZeroColor { get; set; }
-        public string OneColor { get; set; }
-        public string TwoColor { get; set; }
-        public string ThreeColor { get; set; }
+        //Tile Id
+        public int TileId { get; set; }
 
         List<string> colorList = new List<string>();
 
-        public LakeTile(int id, string colorZero, string colorOne, string colorTwo, string colorThree)
+        public LakeTile(string colorZero, string colorOne, string colorTwo, string colorThree)
         {
-            TileId++;
-            ZeroColor = colorZero;
-            OneColor = colorOne;
-            TwoColor = colorTwo;
-            ThreeColor = colorThree;
-
-            colorList.Add(ZeroColor);
-            colorList.Add(OneColor);
-            colorList.Add(TwoColor);
-            colorList.Add(ThreeColor);
+            if (!CanCreateTile())
+            {
+                throw new Exception("You cannot create any more tiles");
+            }
+            
+            TotalTilesCreated++;
+            TileId = TotalTilesCreated;
+            
+            colorList.Add(colorZero);
+            colorList.Add(colorOne);
+            colorList.Add(colorTwo);
+            colorList.Add(colorThree);
             Console.WriteLine(colorList);
         }
 
-        public override string ToString()
+        private bool CanCreateTile()
         {
-            return ZeroColor;
-        }
-
-        
-        public static void Dump(object o)
-        {
-            string json = JsonConvert.SerializeObject(o, Formatting.Indented);
-            Console.WriteLine(json);
+            if (TotalTilesCreated <= 36)
+            {
+                return true;
+            } else
+            {
+                return false;
+            }
         }
 
     }

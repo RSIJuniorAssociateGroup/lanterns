@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.852
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LanternsApp", "LanternsApp\LanternsApp.csproj", "{AF052EB3-2F78-4C26-98B5-023060F14514}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XUnitTestProject2", "XUnitTestProject2\XUnitTestProject2.csproj", "{21DED4BA-0E1B-4B95-86ED-E7A4A67DD965}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{AF052EB3-2F78-4C26-98B5-023060F14514}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AF052EB3-2F78-4C26-98B5-023060F14514}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AF052EB3-2F78-4C26-98B5-023060F14514}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21DED4BA-0E1B-4B95-86ED-E7A4A67DD965}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21DED4BA-0E1B-4B95-86ED-E7A4A67DD965}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21DED4BA-0E1B-4B95-86ED-E7A4A67DD965}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21DED4BA-0E1B-4B95-86ED-E7A4A67DD965}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
