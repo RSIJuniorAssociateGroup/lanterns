@@ -24,18 +24,6 @@ namespace LanternsApp
         // the board
         //public int xCoordinate { get; set; }
         //public int yCoordinate { get; set; }
-
-
-        public bool CanCreateTile( string expectedColor)
-        {
-            if (expectedId <= tileLimit)
-            {
-                return true;
-            }
-            return false;
-        }
-
-        public string Can
     }
 }
 
