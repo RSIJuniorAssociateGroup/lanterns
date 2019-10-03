@@ -11,10 +11,10 @@ namespace LanternsApp
 
         public int TileId { get; set; }
 
-        //List of the 4 colors assigned to the tile
+        // List of the 4 colors assigned to the tile
         List<string> colorList = new List<string>();
 
-        //Constructor for creating a tile
+        // Constructor for creating a tile
         public LakeTile(string colorZero, string colorOne, string colorTwo, string colorThree)
         {
             if (!CanCreateTile())
@@ -31,7 +31,7 @@ namespace LanternsApp
             colorList.Add(colorThree);
         }
 
-        //Insuring can legally create tile
+        // Insuring can legally create tile
         private bool CanCreateTile()
         {
             if (TotalTilesCreated <= 36)
