@@ -11,19 +11,10 @@ namespace LanternsApp
         public int TileId { get; set; }
 
         //Tile Quadrant Colors
-        public string quadrantZeroColor { get; set; }
-        public string quadrantOneColor { get; set; }
-        public string quadrantTwoColor { get; set; }
-        public string quadrantThreeColor { get; set; }
-
-        // Orientation: Relevant only when being placed 
-        // or is placed on the board therefore part of board object.
-        //public int OrientationQuadrant { get; set; }
-
-        // X & Y Coordinates: Again only relevant in relation to
-        // the board
-        //public int xCoordinate { get; set; }
-        //public int yCoordinate { get; set; }
+        public string QuadrantZeroColor { get; set; }
+        public string QuadrantOneColor { get; set; }
+        public string QuadrantTwoColor { get; set; }
+        public string QuadrantThreeColor { get; set; }
     }
 }
 

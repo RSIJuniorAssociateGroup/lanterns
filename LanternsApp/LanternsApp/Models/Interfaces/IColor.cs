@@ -7,10 +7,10 @@ namespace LanternsApp
 {
     interface IColor
     {
-        string quadrantZeroColor { get; set; }
-        string quadrantOneColor { get; set; }
-        string quadrantTwoColor { get; set; }
-        string quadrantThreeColor { get; set; }
+        string QuadrantZeroColor { get; set; }
+        string QuadrantOneColor { get; set; }
+        string QuadrantTwoColor { get; set; }
+        string QuadrantThreeColor { get; set; }
     }
 
 }
