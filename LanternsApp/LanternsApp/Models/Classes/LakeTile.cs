@@ -11,21 +11,22 @@ namespace LanternsApp
         public int TileId { get; set; }
 
         //Tile Quadrant Colors
-        public string TopColorQuadrant { get; set; }
-        public string RightColorQuadrant { get; set; }
-        public string BottomColorQuadrant { get; set; }
-        public string LeftColorQuadrant { get; set; }
+        public string quadrantZeroColor { get; set; }
+        public string quadrantOneColor { get; set; }
+        public string quadrantTwoColor { get; set; }
+        public string quadrantThreeColor { get; set; }
 
-        //Orientation
-        public int OrientationQuadrant { get; set; }
+        // Orientation: Relevant only when being placed 
+        // or is placed on the board therefore part of board object.
+        //public int OrientationQuadrant { get; set; }
 
-        //X & Y Coordinates
-        public int xCoordinate { get; set; }
-        public int yCoordinate { get; set; }
+        // X & Y Coordinates: Again only relevant in relation to
+        // the board
+        //public int xCoordinate { get; set; }
+        //public int yCoordinate { get; set; }
 
-        private int tileLimit = 36;
 
-        public bool CanCreateTile( int expectedId)
+        public bool CanCreateTile( string expectedColor)
         {
             if (expectedId <= tileLimit)
             {

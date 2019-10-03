@@ -37,10 +37,10 @@ namespace UnitTestLakeTiles
             var TilePassingActual = new LanternsApp.LakeTile
             {
                 TileId = 0,
-                TopColorQuadrant = "Red",
-                RightColorQuadrant = "White",
-                BottomColorQuadrant = "Blue",
-                LeftColorQuadrant = "Purple",
+                quadrantZeroColor = "Red",
+                quadrantOneColor = "White",
+                quadrantTwoColor = "Blue",
+                quadrantThreeColor = "Purple",
                 OrientationQuadrant = 0,
                 xCoordinate = 0,
                 yCoordinate = 0
@@ -48,10 +48,10 @@ namespace UnitTestLakeTiles
             var TilePassingExpected = new LanternsApp.LakeTile
             {
                 TileId = 0,
-                TopColorQuadrant = "Red",
-                RightColorQuadrant = "White",
-                BottomColorQuadrant = "Blue",
-                LeftColorQuadrant = "Purple",
+                quadrantZeroColor = "Red",
+                quadrantOneColor = "White",
+                quadrantTwoColor = "Blue",
+                quadrantThreeColor = "Purple",
                 OrientationQuadrant = 0,
                 xCoordinate = 0,
                 yCoordinate = 0
@@ -60,10 +60,10 @@ namespace UnitTestLakeTiles
             ////Verify the method being tested behaves as expected
             Assert.AreEqual(TilePassingActual.TileId, TilePassingExpected.TileId);
             
-            Assert.AreEqual(TilePassingActual.TopColorQuadrant, TilePassingExpected.TopColorQuadrant);
-            Assert.AreEqual(TilePassingActual.RightColorQuadrant, TilePassingExpected.RightColorQuadrant);
-            Assert.AreEqual(TilePassingActual.BottomColorQuadrant, TilePassingExpected.BottomColorQuadrant);
-            Assert.AreEqual(TilePassingActual.LeftColorQuadrant, TilePassingExpected.LeftColorQuadrant);
+            Assert.AreEqual(TilePassingActual.quadrantZeroColor, TilePassingExpected.quadrantZeroColor);
+            Assert.AreEqual(TilePassingActual.quadrantOneColor, TilePassingExpected.quadrantOneColor);
+            Assert.AreEqual(TilePassingActual.quadrantTwoColor, TilePassingExpected.quadrantTwoColor);
+            Assert.AreEqual(TilePassingActual.quadrantThreeColor, TilePassingExpected.quadrantThreeColor);
 
             Assert.AreEqual(TilePassingActual.OrientationQuadrant, TilePassingExpected.OrientationQuadrant);
             Assert.AreEqual(TilePassingActual.xCoordinate, TilePassingExpected.xCoordinate);
