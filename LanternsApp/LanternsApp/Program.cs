@@ -17,6 +17,10 @@ namespace LanternsApp
             //CreateWebHostBuilder(args).Build().Run();
             Console.WriteLine("Here is the start");
             Console.ReadLine();
+            LakeTile tile00 = new LakeTile(00, "red", "blue", "green", "yellow");
+            Console.WriteLine(tile00);
+            LakeTile.Dump(tile00);
+            Console.ReadLine();
         }
 
         //public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>

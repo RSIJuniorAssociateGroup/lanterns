@@ -1,20 +1,51 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace LanternsApp
 {
-    public class LakeTile : IColor
+    public class LakeTile
     {
         //Tile Id
-        public int TileId { get; set; }
+        public static int TileId { get; set; }
 
         //Tile Quadrant Colors
-        public string QuadrantZeroColor { get; set; }
-        public string QuadrantOneColor { get; set; }
-        public string QuadrantTwoColor { get; set; }
-        public string QuadrantThreeColor { get; set; }
+        public string ZeroColor { get; set; }
+        public string OneColor { get; set; }
+        public string TwoColor { get; set; }
+        public string ThreeColor { get; set; }
+
+        List<string> colorList = new List<string>();
+
+        public LakeTile(int id, string colorZero, string colorOne, string colorTwo, string colorThree)
+        {
+            TileId++;
+            ZeroColor = colorZero;
+            OneColor = colorOne;
+            TwoColor = colorTwo;
+            ThreeColor = colorThree;
+
+            colorList.Add(ZeroColor);
+            colorList.Add(OneColor);
+            colorList.Add(TwoColor);
+            colorList.Add(ThreeColor);
+            Console.WriteLine(colorList);
+        }
+
+        public override string ToString()
+        {
+            return ZeroColor;
+        }
+
+        
+        public static void Dump(object o)
+        {
+            string json = JsonConvert.SerializeObject(o, Formatting.Indented);
+            Console.WriteLine(json);
+        }
+
     }
 }
 

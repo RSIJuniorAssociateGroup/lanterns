@@ -12,5 +12,4 @@ namespace LanternsApp
         string QuadrantTwoColor { get; set; }
         string QuadrantThreeColor { get; set; }
     }
-
 }
