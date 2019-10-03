@@ -244,6 +244,3 @@ _Pvt_Extensions
 
 # For mac computers if any used
 /.vendor
-
-# Solution file
-/.sln
