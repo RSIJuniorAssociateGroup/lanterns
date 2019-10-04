@@ -1,40 +1,40 @@
 ID,index: 0,index: 1,index: 2,index: 3,Platform (y/n),Platform image
-LT-01,red,white,black,blue,n,boat (starting tile)
-LT-02,purple,blue,white,green,n, - 
-LT-03,white,green,purple,blue,n, - 
-LT-04,white,black,yellow,red,n, - 
-LT-05,blue,black,yellow,green,n, - 
-LT-06,white,green,blue,black,n, - 
-LT-07,yellow,white,green,red,n, - 
-LT-08,blue,red,white,black,n, - 
-LT-09,black,red,red,green,n, - 
-LT-10,purple,blue,blue,black,n, - 
-LT-11,red,blue,white,yellow,n, - 
-LT-12,blue,red,black,green,n, - 
-LT-13,blue,green,blue,yellow,n, - 
-LT-14,yellow,purple,white,red,n, - 
-LT-15,purple,black,white,yellow,n, - 
-LT-16,red,blue,purple,white,n, - 
-LT-17,yellow,yellow,purple,yellow,n, - 
-LT-18,yellow,blue,purple,black,n, - 
-LT-19,black,green,purple,red,n, - 
-LT-20,yellow,black,purple,red,n, - 
-LT-21,white,white,red,green,n, - 
-LT-22,white,black,yellow,black,n, - 
-LT-23,green,green,red,green,n, - 
-LT-24,black,purple,purple,purple,n, - 
-LT-25,green,blue,purple,red,n, - 
-LT-26,yellow,blue,white,yellow,y,coy fish
-LT-27,blue,yellow,blue,yellow,y,coy fish
-LT-28,blue,white,blue,black,y,coy fish
-LT-29,yellow,red,black,red,y,flower
-LT-30,yellow,green,white,green,y,flower
-LT-31,purple,red,black,black,y,panda
-LT-32,white,yellow,purple,white,y,panda
-LT-33,white,black,white,black,y,panda
-LT-34,red,red,green,green,y,dragon
-LT-35,green,purple,blue,purple,y,dragon
-LT-36,green,purple,purple,red,y,dragon
+01,red,white,black,blue,n,
+02,purple,blue,white,green,n,  
+03,white,green,purple,blue,n,  
+04,white,black,yellow,red,n,  
+05,blue,black,yellow,green,n,  
+06,white,green,blue,black,n,  
+07,yellow,white,green,red,n,  
+08,blue,red,white,black,n,  
+09,black,red,red,green,n,  
+10,purple,blue,blue,black,n,  
+11,red,blue,white,yellow,n,  
+12,blue,red,black,green,n,  
+13,blue,green,blue,yellow,n,  
+14,yellow,purple,white,red,n,  
+15,purple,black,white,yellow,n,  
+16,red,blue,purple,white,n,  
+17,yellow,yellow,purple,yellow,n,  
+18,yellow,blue,purple,black,n,  
+19,black,green,purple,red,n,  
+20,yellow,black,purple,red,n,  
+21,white,white,red,green,n,  
+22,white,black,yellow,black,n,  
+23,green,green,red,green,n,  
+24,black,purple,purple,purple,n,  
+25,green,blue,purple,red,n,  
+26,yellow,blue,white,yellow,y,coy fish
+27,blue,yellow,blue,yellow,y,coy fish
+28,blue,white,blue,black,y,coy fish
+29,yellow,red,black,red,y,flower
+30,yellow,green,white,green,y,flower
+31,purple,red,black,black,y,panda
+32,white,yellow,purple,white,y,panda
+33,white,black,white,black,y,panda
+34,red,red,green,green,y,dragon
+35,green,purple,blue,purple,y,dragon
+36,green,purple,purple,red,y,dragon
 ,,,,,,
 ,,,,,,
 ,,,,,,
