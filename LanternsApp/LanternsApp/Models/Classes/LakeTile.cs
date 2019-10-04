@@ -17,7 +17,7 @@ namespace LanternsApp
         //Constructor for creating a tile
         public LakeTile(string colorZero, string colorOne, string colorTwo, string colorThree)
         {
-            if (!CanCreateTile())
+            if (!CanCreateTile(TotalTilesCreated))
             {
                 throw new Exception("You cannot create any more tiles, all 36 possible tiles have already been created.");
             }
@@ -32,9 +32,9 @@ namespace LanternsApp
         }
 
         //Insuring can legally create tile
-        private bool CanCreateTile()
+        private bool CanCreateTile(int TotalTiles)
         {
-            if (TotalTilesCreated <= 36)
+            if (TotalTiles <= 36)
             {
                 return true;
             } else
