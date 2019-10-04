@@ -22,10 +22,11 @@ namespace LanternsApp.Models.Classes
 
         public bool PlayerActive { get; set; }
 
-        public void CreatePlayer (string Name)
+        public Player (string Name)
         {
             PlayerId++;
             PlayerName = Name;
+            PlayerHonorScore = 0;
         }
     }
 }
