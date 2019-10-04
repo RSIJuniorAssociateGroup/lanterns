@@ -9,7 +9,7 @@ namespace LanternsApp
     public class LakeTile
     {
         //Tile Id
-        public static int TileId { get; set; }
+        public int TileId { get; set; }
 
         //Tile Quadrant Colors
         public string ZeroColor { get; set; }
@@ -21,7 +21,7 @@ namespace LanternsApp
 
         public LakeTile(int id, string colorZero, string colorOne, string colorTwo, string colorThree)
         {
-            TileId++;
+            TileId = id;
             ZeroColor = colorZero;
             OneColor = colorOne;
             TwoColor = colorTwo;
