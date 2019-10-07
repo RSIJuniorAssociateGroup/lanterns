@@ -22,10 +22,6 @@ namespace LanternsApp
             colorList.Add(colorTwo);
             colorList.Add(colorThree);
 
-            foreach (var i in colorList)
-            {
-                Console.WriteLine(i);
-            }
         }
     }
 }
