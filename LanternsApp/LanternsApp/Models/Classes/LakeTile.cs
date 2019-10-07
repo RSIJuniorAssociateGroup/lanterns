@@ -1,5 +1,4 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -8,45 +7,39 @@ namespace LanternsApp
 {
     public class LakeTile
     {
-        //Tile Id
+        public static int TotalTilesCreated { get; set; } = 0;
         public int TileId { get; set; }
-
-        //Tile Quadrant Colors
-        public string ZeroColor { get; set; }
-        public string OneColor { get; set; }
-        public string TwoColor { get; set; }
-        public string ThreeColor { get; set; }
-
+        // List of the 4 colors assigned to the tile
         List<string> colorList = new List<string>();
+        // Constructor for creating a tile
+        public LakeTile(string colorZero, string colorOne, string colorTwo, string colorThree)
+        { 
 
-        public LakeTile(int id, string colorZero, string colorOne, string colorTwo, string colorThree)
-        {
-            TileId = id;
-            ZeroColor = colorZero;
-            OneColor = colorOne;
-            TwoColor = colorTwo;
-            ThreeColor = colorThree;
+            if (!CanCreateTile(TotalTilesCreated))
+            {
+                throw new Exception("You cannot create any more tiles, all 36 possible tiles have already been created.");
+            }
 
-            colorList.Add(ZeroColor);
-            colorList.Add(OneColor);
-            colorList.Add(TwoColor);
-            colorList.Add(ThreeColor);
-            Console.WriteLine(colorList);
+            ++TotalTilesCreated;
+            TileId = TotalTilesCreated;
+
+            colorList.Add(colorZero);
+            colorList.Add(colorOne);
+            colorList.Add(colorTwo);
+            colorList.Add(colorThree);
+            
         }
-
-        public override string ToString()
+        // Insuring can legally create tile
+        private bool CanCreateTile(int TotalTiles)
         {
-            return ZeroColor;
+            if (TotalTiles < 36)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
-
-        
-        public static void Dump(object o)
-        {
-            string json = JsonConvert.SerializeObject(o, Formatting.Indented);
-            Console.WriteLine(json);
-        }
-
     }
 }
-
-

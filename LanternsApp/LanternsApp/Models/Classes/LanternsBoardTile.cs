@@ -5,13 +5,13 @@ using System.Threading.Tasks;
 
 namespace LanternsApp.Models.Classes
 {
-    public class BoardTile
+    public class LanternsBoardTile
     {
         public int Row { get; set; }
         public int Column { get; set; }
         public int TileId { get; set; }
 
-        public BoardTile(int row, int column)
+        public LanternsBoardTile(int row, int column)
         {
             Row = row;
             Column = column;
