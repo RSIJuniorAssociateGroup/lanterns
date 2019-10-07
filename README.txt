@@ -2,9 +2,7 @@ In order to get this project to work on your computer first clone it then...
 
 1) Insure that Node.js is installed
 2) Run "npm install" in the "ClientApp" directory (\LanternsApp\LanternsApp\ClientApp)
-3) Go to the file
-4) Run npm start from the "ClientApp" directory
-
+3) Run npm start from the "ClientApp" directory
 
 Note on File Structure: 
 	LanternsApp:
@@ -15,6 +13,3 @@ Note on File Structure:
 		Pages:			Contains various error messages and a viewimports.cshtml file.
 		Properties:		Empty
 		Root of LaternsApp: 	Appsettings, .gitignore, program.cs and start-up.cs 
-
-
-
