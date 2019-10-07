@@ -7,7 +7,7 @@ namespace LanternsApp
 {
     public class LakeTile
     {
-        public static int TotalTilesCreated { get; set; } = 35;
+        public static int TotalTilesCreated { get; set; } = 0;
 
         public int TileId { get; set; }
 
