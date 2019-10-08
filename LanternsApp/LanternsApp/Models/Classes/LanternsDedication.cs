@@ -11,12 +11,15 @@ namespace LanternsApp.Models.Classes
         public List<int> ThreePair;
         public List<int> FourOfAKind;
 
+        public int OneOfEachIndex;
+        public int ThreePairIndex;
+        public int FourOfAKindIndex;
+
         public LanternsDedication()
         {
             OneOfEach = new List<int>();
             ThreePair = new List<int>();
             FourOfAKind = new List<int>();
-
         }
 
         public void SetListsByNumberOfPlayers(int numberOfPlayers)
@@ -43,6 +46,18 @@ namespace LanternsApp.Models.Classes
             {
                 throw new Exception("Invalid player number.");
             }
+
+            OneOfEachIndex = OneOfEach.Count - 1;
+            ThreePairIndex = ThreePair.Count - 1;
+            FourOfAKindIndex = FourOfAKind.Count - 1;
+
+        }
+
+        public int GiveDedicationToPlayer()
+        {
+
+
+            return -1;
         }
     }
 }
