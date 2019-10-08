@@ -1,15 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
-using LanternsApp.Models.Classes;
-using LanternsApp.Models.Services;
-using LanternsApp.Models.Utilities;
-using Microsoft.AspNetCore;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 
 namespace LanternsApp
@@ -54,7 +43,7 @@ namespace LanternsApp
             string resultFive = JsonConvert.SerializeObject(tile01);
             Console.WriteLine(resultFive);
 
-            Console.WriteLine("The result should return the LakeTile with the original color order: red, blue, green and yellow.");
+            Console.WriteLine("The end result should return the LakeTile with the original color order: red, blue, green and yellow.");
             Console.WriteLine("Click enter to continue to the next test:");
             Console.ReadLine();
 
@@ -69,7 +58,7 @@ namespace LanternsApp
             string resultSeven = JsonConvert.SerializeObject(tile01);
             Console.WriteLine(resultSeven);
 
-            Console.WriteLine("The result should return the LakeTile with the original color order: red, blue, green and yellow.");
+            Console.WriteLine("The end result should return the LakeTile with the original color order: red, blue, green and yellow.");
             Console.WriteLine("Click enter to close window.");
             Console.ReadLine();
         }
