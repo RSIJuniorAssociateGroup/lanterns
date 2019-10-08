@@ -10,11 +10,13 @@ namespace LanternsApp
         public int TileId { get; set; }
 
         // List of the 4 colors assigned to the tile
-        List<string> colorList = new List<string>();
+        public List<string> colorList { get; set; }
 
         // Constructor for creating a tile
         public LakeTile(string colorZero, string colorOne, string colorTwo, string colorThree)
         {
+            colorList = new List<string>();
+
             ++TileId;
 
             colorList.Add(colorZero);
@@ -22,6 +24,10 @@ namespace LanternsApp
             colorList.Add(colorTwo);
             colorList.Add(colorThree);
 
+            /*foreach (var i in colorList)
+            {
+                Console.WriteLine(i);
+            }*/
         }
     }
 }
