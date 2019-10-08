@@ -24,10 +24,20 @@ namespace LanternsApp
             colorList.Add(colorTwo);
             colorList.Add(colorThree);
 
-            /*foreach (var i in colorList)
-            {
-                Console.WriteLine(i);
-            }*/
+        }
+        public static List<string> RotateTileRight(List<string> list)
+        {
+            string item = list[3];
+            list.RemoveAt(3);
+            list.Insert(0, item);
+            return list;
+        }
+        public static List<string> RotateTileLeft(List<string> list)
+        {
+            string item = list[0];
+            list.RemoveAt(0);
+            list.Insert(3, item);
+            return list;
         }
     }
 }
