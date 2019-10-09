@@ -7,6 +7,8 @@ namespace LanternsApp.Models.Classes
 {
     public class LanternsDedication
     {
+        private const int DefaultDedicationTokenValue = 4;
+
         public List<int> OneOfEach;
         public List<int> ThreePair;
         public List<int> FourOfAKind;
@@ -53,11 +55,50 @@ namespace LanternsApp.Models.Classes
 
         }
 
-        public int GiveDedicationToPlayer()
+        public int GiveDedicationToPlayer(string dedicationType)
         {
+            int result;
 
+            switch(dedicationType)
+            {
+                case "OneOfEach":
+                    if (OneOfEachIndex == -1)
+                    {
+                        result = DefaultDedicationTokenValue;
+                        break;
+                    }
 
-            return -1;
+                    result = OneOfEach[OneOfEachIndex];
+                    OneOfEachIndex--;
+                    break;
+
+                case "ThreePair":
+                    if (ThreePairIndex == -1)
+                    {
+                        result = DefaultDedicationTokenValue;
+                        break;
+                    }
+
+                    result = ThreePair[ThreePairIndex];
+                    ThreePairIndex--;
+                    break;
+
+                case "FourOfAKind":
+                    if (FourOfAKindIndex == -1)
+                    {
+                        result = DefaultDedicationTokenValue;
+                        break;
+                    }
+
+                    result = FourOfAKind[FourOfAKindIndex];
+                    FourOfAKindIndex--;
+                    break;
+
+                default:
+                    throw new Exception("Dedication type is not recognized");
+            }
+
+            return result;
         }
     }
 }
