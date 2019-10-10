@@ -7,8 +7,9 @@ namespace LanternsApp
 {
     public class LakeTile
     {
-        public int TileId { get; set; }
+        public static int TotalTilesCreated { get; set; } = 0;
 
+        public int TileId { get; set; }
         // List of the 4 colors assigned to the tile
         public List<string> colorList { get; set; }
 
@@ -17,7 +18,8 @@ namespace LanternsApp
         {
             colorList = new List<string>();
 
-            ++TileId;
+            TileId = TotalTilesCreated;
+            TotalTilesCreated++;
 
             colorList.Add(colorZero);
             colorList.Add(colorOne);

@@ -1,7 +1,16 @@
 To get the backend started for Console testing:
-1) Make sure you open the Visual studio LaternApp solution, not the folder. 
-2) Select the LanternsApp in the 'Select Startup Item' or Build options tab.
-3) Click play on your selection or build the solution.
+
+1) Insure that the following extentions are added: 
+	a) Microsoft.AspNetCore.App
+	b) Microsoft.AspNetCore.SpaServices.Extensions
+	c) Microsoft.NETCore.App
+	Recommended:
+	a) Newtonsoft.Json
+	b) EFCore
+	c) .NET Core SDK 2.2.1nn
+2) Make sure you open the Visual studio LaternApp solution, not the folder. 
+3) Select the LanternsApp in the 'Select Startup Item' or Build options tab.
+4) Click play on your selection or build the solution.
 
 
 In order to get the front end of this project to work on your computer first clone or select the proper branch then...
