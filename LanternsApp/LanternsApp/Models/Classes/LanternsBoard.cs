@@ -17,6 +17,7 @@ namespace LanternsApp.Models.Classes
             RowSize = rowSize;
             ColumnSize = columnSize;
             Board = new List<LanternsBoardTile>();
+            MakeGameBoard();
         }
 
         public void MakeGameBoard()
@@ -32,6 +33,11 @@ namespace LanternsApp.Models.Classes
 
         public bool PlaceLakeTileOnBoard(LakeTile lakeTile, int row, int column)
         {
+            if (row >= RowSize || column >= ColumnSize || row < 0 || column < 0 )
+            {
+                return false;
+            }
+
             var boardTile = Board.Find(tile => tile.Row == row && tile.Column == column);
             boardTile.TileId = lakeTile.TileId;
 
