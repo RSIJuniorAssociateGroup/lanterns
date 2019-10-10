@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using Xunit;
+using Xunit.Abstractions;
 
 namespace LanternsAppTest.Tests
 {
@@ -28,15 +29,48 @@ namespace LanternsAppTest.Tests
 
         [Theory]
         [InlineData(0, 1)]
-        [InlineData(2, 2)]
+        [InlineData(2, 1)]
         [InlineData(1, 2)]
         public void TestPlaceBoardTile(int row, int column)
         {
+            lanternsBoard.PlaceInitialLakeTile(lakeTile2, 1, 1);
             lanternsBoard.PlaceLakeTileOnBoard(lakeTile2, row, column);
             var boardTile = lanternsBoard.Board.Find(tile => tile.Row == row && tile.Column == column);
 
             Assert.Equal(boardTile.TileId, lakeTile2.TileId);
         }
 
+        [Theory]
+        [InlineData(0, 0)]
+        [InlineData(2, 2)]
+        [InlineData(1, 1)]
+        [InlineData(0, 2)]
+        public void TestBoardTileAlreadyFilled(int row, int column)
+        {
+            lanternsBoard.PlaceLakeTileOnBoard(lakeTile2, row, column);
+            Assert.False(lanternsBoard.PlaceLakeTileOnBoard(lakeTile3, row, column));
+        }
+
+        [Theory]
+        [InlineData(0, 0)]
+        [InlineData(0, 2)]
+        [InlineData(2, 0)]
+        [InlineData(2, 2)]
+        public void TestPlacementWithoutAdjacentTiles(int row, int column)
+        {
+            lanternsBoard.PlaceInitialLakeTile(lakeTile2, 1, 1);
+            Assert.False(lanternsBoard.PlaceLakeTileOnBoard(lakeTile1, row, column));
+        }
+
+        [Theory]
+        [InlineData(0, 1)]
+        [InlineData(1, 0)]
+        [InlineData(2, 1)]
+        [InlineData(1, 2)]
+        public void TestPlacementWithAdjacentTiles(int row, int column)
+        {
+            lanternsBoard.PlaceInitialLakeTile(lakeTile3, 1, 1);
+            Assert.True(lanternsBoard.PlaceLakeTileOnBoard(lakeTile2, row, column));
+        }
     }
 }

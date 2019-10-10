@@ -24,8 +24,12 @@ namespace LanternsApp
             //Console.ReadLine();
 
             LanternsBoard board = new LanternsBoard(3, 3);
+            LakeTile lTile = new LakeTile("r", "g", "b", "y");
+            board.PlaceLakeTileOnBoard(lTile, 1, 1);
+            board.PlaceLakeTileOnBoard(lTile, 0, 1);
 
-            Console.WriteLine(board);
+            Console.WriteLine(board.Board.Find(tile => tile.Row == 0 && tile.Column == 1).TileId);
+            Console.WriteLine(board.Board.Find(tile => tile.Row == 1 && tile.Column == 1).TileId);
             Console.ReadLine();
         }
 
