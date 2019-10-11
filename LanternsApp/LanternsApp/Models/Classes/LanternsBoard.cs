@@ -33,7 +33,7 @@ namespace LanternsApp.Models.Classes
 
         public bool PlaceLakeTileOnBoard(LakeTile lakeTile, int row, int column)
         {
-            var canLakeTileBePlayed = false;
+            bool canLakeTileBePlayed = false;
             LanternsBoardTile boardTile = null;
 
             if (Board.Exists(tile => tile.Row == row && tile.Column == column))
@@ -76,7 +76,7 @@ namespace LanternsApp.Models.Classes
         {
             int returnValue = 0;
 
-            if (Board.Exists(tile => (tile.Row == row ) &tile.Column == column))
+            if (Board.Exists(tile => (tile.Row == row ) && tile.Column == column))
             {
                 var tempTile = Board.Find(tile => tile.Row == row && tile.Column == column);
                 if (tempTile.TileId != 0)

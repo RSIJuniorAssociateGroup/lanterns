@@ -62,6 +62,36 @@ namespace LanternsAppTest.Tests
             Assert.False(lanternsBoard.PlaceLakeTileOnBoard(lakeTile1, row, column));
         }
 
+        [Fact]
+        public void TestInitialTilePlacement()
+        {
+            lanternsBoard.PlaceInitialLakeTile(lakeTile3, 0, 0);
+            var boardTile = lanternsBoard.Board.Find(tile => tile.Row == 0 && tile.Column == 0);
+            Assert.Equal(lakeTile3.TileId, boardTile.TileId);
+        }
+
+        [Theory]
+        [InlineData(1, 1, 1)]
+        [InlineData(1, 0, 2)]
+        [InlineData(1, 2, 2)]
+        [InlineData(0, 1, 2)]
+        public void TestCheckAdjacentTile(int row, int column, int expectedValue)
+        {
+            int numberOfAdjacentTiles = 0;
+            lanternsBoard.PlaceInitialLakeTile(lakeTile1, 0, 0);
+            lanternsBoard.PlaceInitialLakeTile(lakeTile1, 2, 0);
+            lanternsBoard.PlaceInitialLakeTile(lakeTile1, 0, 2);
+            lanternsBoard.PlaceInitialLakeTile(lakeTile1, 2, 2);
+            lanternsBoard.PlaceInitialLakeTile(lakeTile1, 2, 1);
+
+            numberOfAdjacentTiles += lanternsBoard.CheckAdjacentTile(row - 1, column);
+            numberOfAdjacentTiles += lanternsBoard.CheckAdjacentTile(row, column - 1);
+            numberOfAdjacentTiles += lanternsBoard.CheckAdjacentTile(row + 1, column);
+            numberOfAdjacentTiles += lanternsBoard.CheckAdjacentTile(row, column + 1);
+
+            Assert.Equal(numberOfAdjacentTiles, expectedValue);
+        }
+
         [Theory]
         [InlineData(0, 1)]
         [InlineData(1, 0)]
